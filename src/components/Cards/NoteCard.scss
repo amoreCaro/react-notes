@@ -1,0 +1,123 @@
+.note-card {
+    background-color: #ffffff;
+    /* White background for the card */
+    border: 1px solid #e0e0e0;
+    /* Light gray border */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 15px;
+    /* Padding inside the card */
+    margin: 10px 0;
+    /* Margin between cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    transition: box-shadow 0.3s;
+    /* Smooth transition for shadow */
+    &:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        /* Darker shadow on hover */
+    }
+    .note-header {
+        display: flex;
+        /* Flex layout for header */
+        justify-content: space-between;
+        /* Space between title and pin */
+        align-items: center;
+        /* Center items vertically */
+        margin-bottom: 10px;
+        /* Space below header */
+        .note-title {
+            h6 {
+                margin: 0;
+                /* Remove default margin */
+                font-size: 1.2em;
+                /* Slightly larger font */
+                color: #333;
+                /* Dark text color */
+            }
+            span {
+                font-size: 0.9em;
+                /* Smaller font for date */
+                color: #888;
+                /* Light gray color for date */
+            }
+        }
+        .pinned {
+            color: gold;
+            /* Color for pinned icon */
+            cursor: pointer;
+            /* Change cursor on hover */
+            transition: transform 0.2s;
+            /* Animation on hover */
+            &:hover {
+                transform: scale(1.1);
+                /* Slightly enlarge on hover */
+            }
+        }
+    }
+    p {
+        margin: 0;
+        /* Remove default margin */
+        color: #444;
+        /* Dark gray text color */
+        font-size: 1em;
+        /* Regular font size */
+        line-height: 1.5;
+        /* Better line spacing */
+    }
+    .note-footer {
+        display: flex;
+        /* Flex layout for footer */
+        justify-content: space-between;
+        /* Space between tags and actions */
+        align-items: center;
+        /* Center items vertically */
+        margin-top: 10px;
+        /* Space above footer */
+        .note-tags {
+            .tag {
+                background-color: #f0f0f0;
+                /* Light gray background for tags */
+                border-radius: 4px;
+                /* Rounded corners for tags */
+                padding: 3px 8px;
+                /* Padding inside tags */
+                margin-right: 5px;
+                /* Space between tags */
+                font-size: 0.9em;
+                /* Smaller font size */
+                color: #666;
+                /* Dark gray color for tags */
+            }
+        }
+        .note-actions {
+            display: flex;
+            /* Flex layout for action icons */
+            align-items: center;
+            /* Center icons vertically */
+            .edit-icon,
+            .delete-icon {
+                cursor: pointer;
+                /* Change cursor on hover */
+                margin-left: 10px;
+                /* Space between icons */
+                font-size: 1.5em;
+                /* Larger font size for icons */
+                color: #007bff;
+                /* Primary color for icons */
+                &:hover {
+                    color: #0056b3;
+                    /* Darker color on hover */
+                }
+            }
+            .delete-icon {
+                color: #dc3545;
+                /* Red color for delete icon */
+                &:hover {
+                    color: #c82333;
+                    /* Darker red on hover */
+                }
+            }
+        }
+    }
+}

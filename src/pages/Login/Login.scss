@@ -1,0 +1,80 @@
+// Color Variables
+$background-color: #edf2fb; // Light Powder Blue
+$text-color: #112a46; // Dark Blue for main text
+$primary-color: #abc4ff; // Light Sky Blue
+$hover-color: #9bb5ff; // Lighter shade for hover effects
+$button-bg: $primary-color; // Button background color
+$button-text: $text-color; // Button text color
+$border-color: #d0e1ff; // Light border color
+// Global Styles for the Login Page
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; // Full viewport height
+    background-color: $background-color; // Background color for the container
+}
+
+.login-form {
+    background-color: white; // Form background color (white for contrast)
+    padding: 2rem; // Consistent padding
+    border-radius: 10px; // Slightly larger border radius for a softer look
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Subtle shadow effect
+    width: 100%;
+    max-width: 400px; // Maximum width for the form
+    display: flex; // Flex layout for the form
+    flex-direction: column; // Vertical alignment of elements
+    gap: 1.5rem; // Equal spacing between elements
+}
+
+.login-title {
+    color: $text-color; // Title text color
+    text-align: center; // Center title
+    margin-bottom: 1rem; // Space below the title
+}
+
+.login-input {
+    width: 100%; // Ensure the input takes the full width of its container
+    padding: 1rem; // Consistent padding for inputs
+    border: 1px solid $border-color; // Border color
+    border-radius: 6px; // Rounded corners for a softer look
+    outline: none; // Remove outline
+    transition: border 0.3s; // Smooth transition for border on focus
+    // Matching styles with the button
+    box-sizing: border-box; // Include padding and border in the element's total width and height
+    &::placeholder {
+        color: darken($text-color, 20%); // Darker placeholder color
+    }
+    &:focus {
+        border-color: $hover-color; // Change border color on focus
+    }
+}
+
+.login-button {
+    width: 100%;
+    padding: 1rem; // Consistent padding for the button
+    background-color: $button-bg; // Button background color
+    color: $button-text; // Button text color
+    border: none; // Remove border
+    border-radius: 6px; // Rounded corners for consistency
+    cursor: pointer; // Pointer cursor
+    transition: background-color 0.3s; // Smooth transition for background on hover
+    &:hover {
+        background-color: $hover-color; // Change background color on hover
+    }
+}
+
+.signup-text {
+    text-align: center; // Center the text
+    margin-top: 1rem; // Space above
+    color: $text-color; // Text color
+}
+
+.signup-link {
+    color: $primary-color; // Link color
+    text-decoration: underline; // Underline link
+    transition: color 0.3s; // Smooth transition for link color on hover
+    &:hover {
+        color: $hover-color; // Change color on hover
+    }
+}

@@ -1,0 +1,29 @@
+$light-blue: #e0f7fa; // Light blue background
+$icon-color: #00796b; // Icon color
+$icon-hover-color: #004d40; // Darker color on hover
+$text-color: #333; // Text color
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: $light-blue;
+    border-radius: 4px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    input {
+        border: none;
+        outline: none;
+        flex: 1;
+        padding: 5px;
+        border-radius: 4px;
+        background-color: transparent;
+        color: $text-color; // Use variable for text color
+    }
+    .icon {
+        cursor: pointer;
+        margin-left: 10px;
+        color: $icon-color; // Use variable for icon color
+        &:hover {
+            color: $icon-hover-color; // Use variable for hover color
+        }
+    }
+}
